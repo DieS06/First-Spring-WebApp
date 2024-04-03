@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"></meta>
+<meta http-equiv="Content-Type" content="text/html"></meta>
+<title>Anthologies</title>
+</head>
+<body>
+Editar:
+<form action="#" th:action="@{/categorias/editarCategoria/{id}(id=${id})}" th:object="${categoria}" method="post">
+    <label for="name">Nombre</label>
+    <input type="text" th:field="*{name}" id="name"><br/>
+    <label for="prefix">Prefijo: </label>
+    <input type="text" th:field="*{prefijo}" id="prefix">
+    <label for="description">Descripcion: </label>
+    <input type="text" th:field="*{descripcion}" id="description">
+     <input type="submit" value="Guardar Categoria">
+</form>
+<a th:href="@{/}">Ir al inicio</a>
+</body>
+</html>

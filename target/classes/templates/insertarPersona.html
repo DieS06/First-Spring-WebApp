@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"></meta>
+<meta http-equiv="Content-Type" content="text/html"></meta>
+<title>Anthologies</title>
+</head>
+<body>
+Insertar:
+<form action="#" th:action="@{/personas/insertarPersona}" th:object="${persona}" method="post">
+    <label for="nombre">Nombre</label>
+    <input type="text" th:field="*{name}" id="nombre"><br/>
+    <label for="primer_apellido">Primer apellido: </label>
+    <input type="text" th:field="*{first_LN}" id="primer_apellido"><br/>
+    <label for="segundo_apellido">Segundo apellido: </label>
+    <input type="text" th:field="*{sec_LN}" id="segundo_apellido"><br/>
+    <label for="fecha_nacimiento">Fecha de nacimiento: </label>
+    <input type="text" th:field="*{birthday}" id="fecha_nacimiento"><br/>
+    <label for="direccion">Direccion: </label>
+    <input type="text" th:field="*{address}" id="direccion"><br/>
+    <input type="submit" value="Agregar Persona">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"></meta>
+<meta http-equiv="Content-Type" content="text/html"></meta>
+<title>Anthologies</title>
+</head>
+<body>
+Editar:
+<form action="#" th:action="@{/productos/editarProducto/{id}(id=${id})}" th:object="${producto}" method="post">
+    <label for="nombre">Nombre</label>
+    <input type="text" th:field="*{nombre}" id="nombre"><br/>
+    <label for="precio">Precio: </label>
+    <input type="text" th:field="*{precio}" id="precio">
+     <input type="submit" value="Guardar Producto">
+</form>
+<a th:href="@{/}">Ir al inicio</a>
+</body>
+</html>

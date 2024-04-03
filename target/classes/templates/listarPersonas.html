@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"></meta>
+<meta http-equiv="Content-Type" content="text/html"></meta>
+<title>Listas</title>
+</head>
+<body>
+	<!-- PERSONAS -->
+	<div class="list-person">
+		<h1>Lista de Personas</h1>
+		<ul>
+			<div th:each="persona : ${personas}">
+				<li>
+					<h4>
+						<span th:text="${persona.name}">Nombre</span>
+					</h4>
+					Primer apellido: <span th:text="${persona.first_LN}">0</span>
+					Segundo apellido: <span th:text="${persona.sec_LN}">0</span><br>
+					Fecah de nacimiento: <span th:text="${persona.birthday}">0</span><br>
+					Dirección: <span th:text="${persona.address}">0</span>
+				</li>
+			</div>
+		</ul>
+	</div>
+	<a th:href="@{/personas/insertarPersona}">Agregar Persona</a><br/>
+	<a th:href="@{/}">Ir al inicio</a>
+
+</body>
+</html>

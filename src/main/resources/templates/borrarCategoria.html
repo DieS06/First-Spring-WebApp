@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Borrado</title>
+</head>
+Borrar:
+<form action="#" th:action="@{/categorias/borrarCategoria/{id}(id=${id})}" th:object="${categoria}" method="post">
+  Desea borrar <span th:text="${categoria.name}">Nombre</span> ?
+  <input type="submit" value="Si, borrar">
+</form>
+<a th:href="@{/}">Ir al inicio</a>
+<body>
+
+</body>
+</html>
